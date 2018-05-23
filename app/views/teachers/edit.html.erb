@@ -1,0 +1,24 @@
+<%=form_for @teachers do |t| %>
+    <div class="form-group">
+    <%= t.label :first_name %>
+    <%= t.text_field :first_name, label: "First Name:", class: "form-control" %>
+    </div>
+    <div class="form-group">
+    <%= t.label :last_name %>
+    <%= t.text_field :last_name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+   <%= t.label :salary %>
+    <%= t.text_field :salary, class: "form-control" %>
+    </div>
+    <div class="form-group">
+    <%= t.label :age %>
+    <%= t.select :age, (21..150)%>
+    </div>
+    <div class="form-group">
+    <%= t.label :education %>
+    <%= t.select :education,["High-School","College","Masters","PhD"] %>
+    </div>
+    <%= t.submit "Update Teacher" %>
+
+<% end %>

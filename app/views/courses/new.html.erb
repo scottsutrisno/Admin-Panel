@@ -1,0 +1,12 @@
+<%=form_for @course do |f| %>
+  <div class="form-group">
+  <%= f.label :name %>
+   <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+  <%= f.label :hours %>
+<%= f.text_field :hours, class: "form-control" %>
+  </div>
+<%= f.submit "Create Cohort" %>
+
+<% end %>

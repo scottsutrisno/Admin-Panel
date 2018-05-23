@@ -1,0 +1,59 @@
+<%=form_for @cohort do |f| %>
+  <div class="form-group">
+  <%= f.label :name %>
+   <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+  <%= f.label :start_date %>
+<%= f.date_field :start_date, class: "form-control" %>
+  </div>
+    <div class="form-group">
+    <%= f.label :end_date %>
+    <%= f.date_field :end_date, class: "form-control" %>
+    </div>
+        <div class="form-group">
+    <%= f.label :course_id %>
+    <%= f.collection_select(:course_id, Course.all, :id, :name) %>
+    </div>
+
+<%= f.submit "Update Cohort" %>
+
+<% end %>
+
+
+
+
+
+<%=form_for @teacher_cohort do |f| %>
+  <div class="form-group">
+  <%= f.label :teacher_id %>
+  <%= f.collection_select(:teacher_id, Teacher.all, :id, :teacher_full_name) %>
+  </div>
+  <div class="form-group">
+  <%= f.hidden_field(:cohort_id, value: "#{@cohort.id}") %>
+  </div>
+<%= f.submit "Add Teacher" %>
+
+<% end %>
+
+
+
+
+
+
+
+<%=form_for @student_cohort do |f| %>
+  <div class="form-group">
+  <%= f.label :teacher_id %>
+  <%= f.collection_select(:student_id, Student.all, :id, :student_full_name) %>
+  </div>
+  <div class="form-group">
+  <%= f.hidden_field(:cohort_id, value: "#{@cohort.id}") %>
+  </div>
+<%= f.submit "Add Student" %>
+
+<% end %>
+
+
+
+

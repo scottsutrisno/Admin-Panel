@@ -1,0 +1,21 @@
+<%=form_for @cohort do |f| %>
+  <div class="form-group">
+  <%= f.label :name %>
+   <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+  <%= f.label :start_date %>
+<%= f.date_field :start_date, class: "form-control" %>
+  </div>
+    <div class="form-group">
+    <%= f.label :end_date %>
+    <%= f.date_field :end_date, class: "form-control" %>
+    </div>
+        <div class="form-group">
+    <%= f.label :course_id %>
+    <%= f.collection_select(:course_id, Course.all, :id, :name) %>
+    </div>
+
+<%= f.submit "Create Cohort" %>
+
+<% end %>

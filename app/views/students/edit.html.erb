@@ -1,0 +1,20 @@
+<%=form_for @students do |student| %>
+  <div class="form-group">
+  <%= student.label :first_name %>
+   <%= student.text_field :first_name, label: "First Name:", class: "form-control" %>
+  </div>
+  <div class="form-group">
+  <%= student.label :last_name %>
+<%= student.text_field :last_name, label: "Last Name:", class: "form-control" %>
+  </div>
+    <div class="form-group">
+    <%= student.label :age %>
+    <%= student.select :age, (14..149)%>
+    </div>
+    <div class="form-group">
+    <%= student.label :education %>
+    <%= student.select :education,["Freshman","Sophomore","Junior","Senior"] %>
+    </div>
+<%= student.submit "Update Student" %>
+
+<% end %>

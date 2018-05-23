@@ -1,0 +1,27 @@
+<h1>Cohorts</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Cohorts</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @cohorts.each do |cohort| %>
+      <tr>
+        <td><%= cohort.id %></td>
+        <td><%= cohort.name %></td>
+        <td><%= cohort.start_date %></td>
+        <td><%= cohort.end_date %></td>
+        <td class="btn btn-dark"><%= link_to "Show", cohort %></td>
+        <td class="btn btn-dark"><%= link_to "Edit Cohort", edit_cohort_path(cohort) %></td>
+        <td class="btn btn-danger"><%= link_to 'Annihilate', cohort, method: :delete, data: { confirm: 'FoSho?' } %></td>
+
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-dark"><%= link_to 'New Cohort', new_cohort_path %></button>

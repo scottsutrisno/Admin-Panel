@@ -1,0 +1,34 @@
+nav ul {
+    float: right !important;
+}
+
+body {
+    background-color: white !important;
+    font-family: 'Muli', sans-serif !important;
+}
+
+a {
+    color: white !important;
+}
+
+h2 {
+    color:black;
+}
+
+label {
+    color:black;
+}
+
+nav a {
+    margin-left: 50px;
+}
+
+.btn {
+    width: 33%;
+}
+
+.navbar-toggler-icon {
+    background-color: black !important;
+    border: solid darkred 2px;
+    box-shadow: -4px -2px 1px black;
+}

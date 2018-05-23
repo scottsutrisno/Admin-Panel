@@ -1,0 +1,57 @@
+<h1>Cohorts</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Cohorts</th>
+        <th scope="col">Teacher</th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><%= @cohort.id %></td>
+        <td><%= @cohort.name %></td>
+        <td><%= @cohort.start_date %></td>
+        <td><%= @cohort.end_date %></td>
+        <td class="btn btn-dark"><%= link_to "Show", @cohort %></td>
+        <td class="btn btn-dark"><%= link_to "Edit Cohort", edit_cohort_path(@cohort) %></td>
+        <td class="btn btn-danger"><%= link_to 'Annihilate', @cohort, method: :delete, data: { confirm: 'FoSho?' } %></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+<table class="table">
+      <tbody>
+        <tr>
+          <th scope="row">Courses:</th>
+          <th scope="row">Teachers:</th>
+          <th scope="row">Students:</th>
+          </tr>
+          <tr>
+          <td><%= @cohort.course.name %> </td>
+
+            <% @cohort.teachers.each do |teacher|%>
+            <td><%= teacher.first_name %> </td>
+            <% end %>
+
+
+            <% @cohort.students.each do |student|%>
+            <td><%= student.first_name %> </td>
+            <% end %>
+
+
+
+      </tr>
+      </tbody>
+      </table>
+
+
+
+
