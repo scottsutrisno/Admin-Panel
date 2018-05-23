@@ -6,7 +6,7 @@ class StudentCohortsController < ApplicationController
   def update
     @student_cohorts = StudentCohort.find(params[:id])
 
-   if @student_cohorts.update_attributes(student_cohorts_params)
+   if @student_cohorts.update_attributes(student_cohort_params)
       redirect_to cohorts_url
    else
       render :action => 'edit'
@@ -14,7 +14,7 @@ class StudentCohortsController < ApplicationController
   end
 
   def create
-    @student_cohorts = StudentCohort.new(student_cohorts_params)
+    @student_cohorts = StudentCohort.new(student_cohort_params)
 
     if @student_cohorts.save
       redirect_to cohorts_url
@@ -30,8 +30,8 @@ class StudentCohortsController < ApplicationController
 
 private
 
-  def student_cohorts_params
-    params.require(:student_cohorts).permit(:student_id, :cohort_id)
+  def student_cohort_params
+    params.require(:student_cohort).permit(:student_id, :cohort_id)
   end
 
 

@@ -18,7 +18,6 @@
         <td><%= @cohort.name %></td>
         <td><%= @cohort.start_date %></td>
         <td><%= @cohort.end_date %></td>
-        <td class="btn btn-dark"><%= link_to "Show", @cohort %></td>
         <td class="btn btn-dark"><%= link_to "Edit Cohort", edit_cohort_path(@cohort) %></td>
         <td class="btn btn-danger"><%= link_to 'Annihilate', @cohort, method: :delete, data: { confirm: 'FoSho?' } %></td>
       </tr>

@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  before_action :require_login, only: [:new, :edit, :create, :destroy]
   def index
     @students = Student.all
   end

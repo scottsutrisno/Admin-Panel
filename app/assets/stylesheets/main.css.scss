@@ -32,3 +32,10 @@ nav a {
     border: solid darkred 2px;
     box-shadow: -4px -2px 1px black;
 }
+
+.body {
+ height: 1000px;
+ width: 1150px;
+ background-image: URL("bg.png");
+ background-size: contain;
+}

@@ -16,7 +16,7 @@
 
 <nav class="navbar navbar-expand-lg" style="background-color: #dc3545;">
   <a class="navbar-brand" href="/">
-  <img src="/assets/images/logo" width="30" height="30" class="d-inline-block align-top" alt="">ADMIN PANEL</a>
+  <img src="logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">RAILS PANEL</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -47,12 +47,6 @@
 </nav>
 
 <div class="container">
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>">
-      <%= flash[:info] if flash [:info] %>
-      <%= flash[:info] if flash [:info] %>
-    </div>
-  <% end %>
 
   <%= yield %>
 </div>
