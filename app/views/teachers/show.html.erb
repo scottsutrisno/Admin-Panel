@@ -18,8 +18,9 @@
               <td><%= @teachers.last_name %></td>
               <td><%= @teachers.age %></td>
               <td><%= @teachers.education %></td>
+              <td><%= @teachers.salary %></td>
               <td class="btn btn-dark"><%= link_to 'Edit', edit_teacher_path(@teachers) %></td>
-              <td class="btn btn-danger"><%= link_to 'Destroy', @teachers, method: :delete, data: { confirm: 'FoSho?' } %></td>
+              <td class="btn btn-danger"><%= link_to 'Annihilate', @teachers, method: :delete, data: { confirm: 'FoSho?' } %></td>
             </tr>
         </tbody>
       </table>

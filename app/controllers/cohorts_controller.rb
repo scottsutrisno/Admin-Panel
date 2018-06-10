@@ -1,5 +1,5 @@
 class CohortsController < ApplicationController
-  before_action :require_login, only: [:new, :edit, :create, :destroy]
+  # before_action :require_login, only: [:new, :edit, :create, :destroy]
   def index
     @cohorts = Cohort.all
   end
@@ -18,9 +18,8 @@ class CohortsController < ApplicationController
 
   def edit
     @cohort = Cohort.find(params[:id])
-    # @student_cohort_remove = StudentCohort.find_by(cohort_id: params[:id])
-      @teacher_cohort = TeacherCohort.new
-      @student_cohort = StudentCohort.new
+    @teacher_cohort = TeacherCohort.new
+    @student_cohort = StudentCohort.new
 
 
   end

@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  before_action :require_login, only: [:new, :edit, :create, :destroy]
+  # before_action :require_login, only: [:new, :edit, :create, :destroy]
   def index
     @courses = Course.all
   end

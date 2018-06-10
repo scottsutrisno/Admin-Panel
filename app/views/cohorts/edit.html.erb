@@ -44,7 +44,7 @@
 
 <%=form_for @student_cohort do |f| %>
   <div class="form-group">
-  <%= f.label :teacher_id %>
+  <%= f.label :student_id %>
   <%= f.collection_select(:student_id, Student.all, :id, :student_full_name) %>
   </div>
   <div class="form-group">
